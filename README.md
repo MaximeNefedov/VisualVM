@@ -24,7 +24,7 @@ public class JvmComprehension {
 Происходит обращение к подсистеме загрузчиков классов (Application Classloader, Platform Classloader, Bootstrap Classloader) подгрузить классы Object, Integer, System, JvmComprehension и т.д.  Процесс осуществляется путем использования связки команд find / load к каждому Classloader`у. В случае невыполнения подгрузки какого-то из классов возникнет ClassNotFoundException. Далее происходит связывание (проверка валидности кода, подготовка примитивов и статических полей, а также связывание ссылок на другие классы) и инициализация статических полей класса.
 Классы подгружаются в оперативную память, а точнее происходит деление выделенной для JVM памяти на 3 блока: Stack Memory(цепочка фреймов), Heap(выделение памяти под созданные объекты), Metaspace(данные о классе и константы).
 
-![image](https://github.com/MaximeNefedov/VisualMV/blob/master/dio.jpg)
+![image](https://raw.githubusercontent.com/MaximeNefedov/VisualVM/master/screenshoots/dio.jpg)
 
 На схеме выше продемонстрирована работа с областями памяти вплоть до 6 - й строки включительно. 
 
@@ -32,7 +32,7 @@ public class JvmComprehension {
 
 Следовательно, при выполнении сроки 7 произойдет следующее:
 
-![image2](https://github.com/MaximeNefedov/VisualMV/blob/master/dio2.jpg)
+![image2](https://raw.githubusercontent.com/MaximeNefedov/VisualVM/master/screenshoots/dio2.jpg)
 
 У объекта Integer uselessVar = 700 не останется активных ссылок и вскоре сборщик мусора уничтожит данный объект. То же самое произойдет и с объектом типа String, созданным для вывода в консоль сторокового предствления экземпляра класса Object. 
 Объекты: 
